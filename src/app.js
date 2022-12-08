@@ -8,7 +8,7 @@ const app =express();
 app.set('view engine', 'ejs');
 
 app.get('/', async(req, res)=>{
-    const [rows] = await pool.query("SELECT * FROM USERS")
+    // const [rows] = await pool.query("SELECT * FROM USERS")
     // res.json(rows)
     res.render('index')
     // res.send("Welcome to server")
