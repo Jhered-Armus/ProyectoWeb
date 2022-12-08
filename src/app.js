@@ -13,7 +13,7 @@ app.get('/', async(req, res)=>{
     res.render('index')
     // res.send("Welcome to server")
 })
-app.get('/prueba', async(req, res)=>{
+app.get('/prueba', (req, res)=>{
     // const [rows] = await pool.query("SELECT * FROM USERS")
     // res.json(rows)
     res.render('prueba')
