@@ -14,7 +14,7 @@ app.get('/', async(req, res)=>{
     // res.send("Welcome to server")
 })
 app.get('/prueba', async(req, res)=>{
-    const [rows] = await pool.query("SELECT * FROM USERS")
+    // const [rows] = await pool.query("SELECT * FROM USERS")
     // res.json(rows)
     res.render('prueba')
     // res.send("Welcome to server")
