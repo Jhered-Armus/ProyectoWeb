@@ -33,25 +33,26 @@
         </div>
     </header>
     <main>
-        <h2>Galeria</h2>
+        <h2>Arreglos</h2>
         <div class="container">
             <% rows.forEach(inicio=>{ %>
                 <div class="caja">
                     <img src="<%=inicio.img%>" />
                     <h1>
-                        <%=inicio.producto%>
+                        <%=inicio.descripcion%>
                     </h1>
 
                 </div>
                 <% }) %>
         </div>
-
     </main>
     <section>
-        <h2>Metodos de Pago</h2>
-        <div class="container2">
-            <% pay.forEach(pago=>{ %>
-                    <img src="<%=pago.img%>" />
+        <h2>Decoracion</h2>
+        <div class="container6">
+            <% deco.forEach(decoracion=>{ %>
+                <div class="caja2">
+                    <img src="<%=decoracion.img%>" />
+                </div>
                 <% }) %>
         </div>
     </section>

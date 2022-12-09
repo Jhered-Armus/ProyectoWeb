@@ -10,13 +10,21 @@ app.set('view engine', 'ejs');
 app.use(express.static("public")); 
 
 app.get('/', async(req, res)=>{
-    // const [rows] = await pool.query("SELECT * FROM USERS")
+    const [rows] = await pool.query("SELECT * FROM inicio")
+    const [pay] = await pool.query("SELECT * FROM pago")
     // res.json(rows)
-    res.render('index')
+    res.render('index', {rows, pay})
 })
-app.get('/prueba', (req, res)=>{
-    res.render('prueba')
- 
+
+app.get('/ubicaciones', async (req, res)=>{
+    res.render('ubicaciones')
+})
+
+app.get('/productos', async(req, res)=>{
+    const [rows] = await pool.query("SELECT * FROM arreglos")
+    const [deco] = await pool.query("SELECT * FROM decoracion")
+    // res.json(rows)
+    res.render('productos', {rows, deco})
 })
 
 
